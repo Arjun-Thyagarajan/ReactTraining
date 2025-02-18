@@ -6,14 +6,16 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && tsc -b && vite build",
-    "lint": "npm run es-lint-check && npm run code-format-check",
-    "lint-fix": "npm run es-lint-fix && npm run code-format-fix",
+    "lint": "npm run es-lint-check && npm run code-format-check && style-lint-check && md-lint-check",
+    "lint-fix": "npm run es-lint-fix && npm run code-format-fix && style-lint-fix && md-lint-fix",
     "es-lint-check": "eslint .",
     "es-lint-fix": "eslint . --fix",
     "code-format-check": "prettier . --check",
     "code-format-fix": "prettier . --write",
     "style-lint-check": "npx stylelint **/*.scss",
     "style-lint-fix": "npx stylelint **/*.scss --fix",
+    "md-lint-check": "markdownlint-cli2 **/*.md",
+    "md-lint-fix": "markdownlint-cli2 --fix **/*.md",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -31,6 +33,7 @@
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
+    "markdownlint-cli2": "^0.17.2",
     "prettier": "3.5.1",
     "sass-embedded": "^1.85.0",
     "stylelint": "^16.14.1",
