@@ -1,0 +1,11 @@
+{
+  "ignorePaths": ["node_modules/**", "dist/**", "*.svg"],
+  "dictionaryDefinitions": [
+    {
+      "name": "cspelldictionary",
+      "path": "./cspelldictionary.txt",
+      "addWords": true
+    }
+  ],
+  "dictionaries": ["cspelldictionary"]
+}

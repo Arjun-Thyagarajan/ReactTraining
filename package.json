@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && tsc -b && vite build",
-    "lint": "npm run es-lint-check && npm run code-format-check && style-lint-check && md-lint-check",
+    "lint": "npm run es-lint-check && npm run code-format-check && style-lint-check && md-lint-check && cspell-check",
     "lint-fix": "npm run es-lint-fix && npm run code-format-fix && style-lint-fix && md-lint-fix",
     "es-lint-check": "eslint .",
     "es-lint-fix": "eslint . --fix",
@@ -16,6 +16,7 @@
     "style-lint-fix": "npx stylelint **/*.scss --fix",
     "md-lint-check": "markdownlint-cli2 **/*.md",
     "md-lint-fix": "markdownlint-cli2 --fix **/*.md",
+    "cspell-check": "cspell **",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -27,6 +28,7 @@
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@vitejs/plugin-react": "^4.3.4",
+    "cspell": "^8.17.3",
     "eslint": "^9.19.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-react": "^7.37.4",

@@ -1,0 +1,4 @@
+tseslint
+cspelldictionary
+Avenir
+reacttraining
