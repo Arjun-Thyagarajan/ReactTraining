@@ -6,10 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run lint && tsc -b && vite build",
-    "lint": "npm run es-lint && npm run code-format-lint-check",
-    "es-lint": "eslint .",
-    "code-format-lint-check": "prettier . --check",
-    "code-format-lint-run": "prettier . --write",
+    "lint": "npm run es-lint-check && npm run code-format-check",
+    "lint-fix": "npm run es-lint-fix && npm run code-format-fix",
+    "es-lint-check": "eslint .",
+    "es-lint-fix": "eslint . --fix",
+    "code-format-check": "prettier . --check",
+    "code-format-fix": "prettier . --write",
     "preview": "vite preview"
   },
   "dependencies": {
