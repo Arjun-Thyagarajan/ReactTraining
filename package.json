@@ -17,6 +17,7 @@
     "md-lint-check": "markdownlint-cli2 **/*.md",
     "md-lint-fix": "markdownlint-cli2 --fix **/*.md",
     "cspell-check": "cspell **",
+    "commit-message-check": "npx commitlint --from=HEAD~1 --verbose",
     "preview": "vite preview",
     "prepare": "husky",
     "lint-staged": "lint-staged"
@@ -43,6 +44,8 @@
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/js": "^9.19.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
