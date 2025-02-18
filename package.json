@@ -18,7 +18,25 @@
     "md-lint-fix": "markdownlint-cli2 --fix **/*.md",
     "cspell-check": "cspell **",
     "preview": "vite preview",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,css,scss,md,json}": [
+      "cspell"
+    ],
+    "**/*.{js,jsx,ts,tsx,json}": [
+      "prettier --write"
+    ],
+    "*.md": [
+      "markdownlint-cli2 **/*.md"
+    ]
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -37,6 +55,7 @@
     "eslint-plugin-react-refresh": "^0.4.18",
     "globals": "^15.14.0",
     "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
     "markdownlint-cli2": "^0.17.2",
     "prettier": "3.5.1",
     "sass-embedded": "^1.85.0",
