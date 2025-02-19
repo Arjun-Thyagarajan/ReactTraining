@@ -20,5 +20,7 @@ export default defineConfig({
       enabled: true,
       reporter: ["text", "json", "html"],
     },
+    globals: true,
+    environment: "jsdom",
   },
 });
