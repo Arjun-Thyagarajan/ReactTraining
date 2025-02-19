@@ -1,10 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import styles from "./App.module.scss";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    async function test() {
+      const response = await fetch("https://example.com/user");
+
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const user = await response.json();
+
+      console.log("React component error", user);
+    }
+
+    test()
+      .then(() => {
+        console.log("done");
+      })
+      .catch(() => {
+        console.log("error");
+      });
+  });
 
   return (
     <>
