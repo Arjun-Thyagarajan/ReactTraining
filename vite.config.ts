@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
@@ -12,6 +13,12 @@ export default defineConfig({
       scss: {
         api: "modern-compiler",
       },
+    },
+  },
+  test: {
+    coverage: {
+      enabled: true,
+      reporter: ["text", "json", "html"],
     },
   },
 });
